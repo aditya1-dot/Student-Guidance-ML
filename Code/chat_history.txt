@@ -1,9 +1,15 @@
 assistant: Were there specific topics or concepts that you struggled with? 
-user: 1
-assistant: Did you use any specific study methods or techniques? 
-user: 2
+user: why would i
+assistant: Did you feel adequately prepared for the exam? 
+user: no i couldn't prepare for it
+assistant: How did you prepare for the exam? 
+user: i said i didn't prepare
 assistant: Did you ask questions when you were unsure about something? 
-user: 3
-assistant: Were there any resources that you found particularly helpful or unhelpful? 
-user: 4
+user: yes i asked questions
+assistant: Were you actively engaged in class discussions and activities? 
+user: yes i was 
+assistant: Did you use additional resources, such as textbooks, online materials, or tutoring? 
+user: youtube
+assistant: Did you use additional resources, such as textbooks, online materials, or tutoring? 
+user: youtube videos and khan acedemy
 assistant: Thanks for you valuable Time. 

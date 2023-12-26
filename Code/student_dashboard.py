@@ -1,6 +1,6 @@
 import streamlit as st
 import time
-from student_dashboard_utils import Questionnaire,model_loader
+from student_dashboard_utils import Questionnaire,model_loader,expected_answer,Rephrase
 import chat_bot
 def initialize_chat_history():
     if "messages" not in st.session_state:
@@ -54,12 +54,27 @@ def main():
 
     # Accept user input
     if prompt := st.chat_input("Student's Response"):
+        st.session_state.flag-=1
         # Display user message in chat message container
         with st.chat_message("user"):
             st.markdown(prompt)
         # Add user message to chat history
         st.session_state.messages.append({"role": "user", "content": prompt})
-
+        updater=expected_answer(st.session_state.flag-1,prompt)
+        if updater==1:
+            st.session_state.flag+=1
+        else:
+            with st.chat_message("assistant"):
+                message_placeholder=st.empty()
+                full_response=""
+                assistant_response=Rephrase()
+                for chunk in assistant_response.split():
+                    full_response += chunk + " "
+                    time.sleep(0.05)
+                    # Add a blinking cursor to simulate typing
+                    message_placeholder.markdown(full_response + "▌ ")
+                message_placeholder.markdown(full_response)
+        
         # Check if it's the bot's turn to ask a question
         if st.session_state.flag != 6:
             # Display assistant question in chat message container
