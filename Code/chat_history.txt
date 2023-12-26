@@ -1,0 +1,9 @@
+assistant: Were there specific topics or concepts that you struggled with? 
+user: 1
+assistant: Did you use any specific study methods or techniques? 
+user: 2
+assistant: Did you ask questions when you were unsure about something? 
+user: 3
+assistant: Were there any resources that you found particularly helpful or unhelpful? 
+user: 4
+assistant: Thanks for you valuable Time. 
